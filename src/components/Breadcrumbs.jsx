@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import useBreadcrumbs from 'use-react-router-breadcrumbs'
 
-const routes = [
-    {path: '/books/', breadcrumb: 'Books'},
-    {path: '/books/:bookID', breadcrumb: 'exampleBook'}
-];
 
-function Breadcrumbs() {
+
+function Breadcrumbs({title}) 
+{const routes = [
+    {path: '/books/', breadcrumb: 'Books'},
+    {path: '/books/:bookID', breadcrumb: `${title}`}
+];
       const breadcrumbs = useBreadcrumbs(routes);
       console.log(breadcrumbs)
 

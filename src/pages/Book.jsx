@@ -41,7 +41,7 @@ const Book = () => {
 
     return (<Container>
 
-        <Breadcrumbs></Breadcrumbs>
+        <Breadcrumbs title={book.title}></Breadcrumbs>
         
         {error && <ErrorAlert>{error}</ErrorAlert>}
         {!error && loading && <div className="max-w-[230px]"><Skeleton count="10" /></div>}
